@@ -4,35 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/jquery.dataTables.min.css" rel="stylesheet" >
 		<script src="js/jquery.js"></script>
-		<script src="js/tablesorter.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() 
-	    		{ 
-	       			$('.table').tablesorter(); 
-	    		} 
-			);
-		</script>
-		<style>
-			.table th.a{
-				background-image: url(images/sort_both.png);
-				background-repeat: no-repeat;
-				background-position: center right;
-				cursor:pointer;
-			}
-			.table th.headerSortUp{
-				background-image: url(images/sort_asc.png);
-				background-color: #666666;
-				background-repeat: no-repeat;
-				background-position: center right;
-			}
-			.table th.headerSortDown{
-				background-image: url(images/sort_desc.png);
-				background-color: #666666;
-				background-repeat: no-repeat;
-				background-position: center right;
-			}
+		<script src="js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/fixedcolumns/3.3.0/js/dataTables.fixedColumns.min.js"></script>
 
+		<style>
 			.dropdown-submenu {
 			  position: relative;
 			}
@@ -108,7 +85,7 @@
 		  </div>
 		</nav>
 		<div class="mx-auto mb-5 table-responsive" style="width: 100%">
-			<table class="table table-bordered table-hover table-sm">
+			<table id="tabela" class="table table-bordered table-hover table-sm">
 				<caption>UFU 2014 Bacharelado - Questões Discursivas</caption>
 				<thead class="thead-dark">
 					<tr>
@@ -194,6 +171,16 @@
 
 			  return false;
 			});
-		</script>			
+		</script>	
+		<script>
+			$(document).ready(function() {
+			    $('#tabela').DataTable( {
+				    scrollY:        600,
+				    scrollX:        true,
+				    scrollCollapse: true,
+				    paging:         false,
+				} );
+			} );
+		</script>		
 	</body>
 </html>
