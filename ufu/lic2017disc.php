@@ -5,6 +5,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<script src="js/jquery.js"></script>
+		<!--
+		<script src="js/excel-bootstrap-table-filter-bundle.js"></script>
+		<link rel="stylesheet" href="css/excel-bootstrap-table-filter-style.css">-->
 		<script src="js/tablesorter.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() 
@@ -32,6 +35,7 @@
 				background-repeat: no-repeat;
 				background-position: center right;
 			}
+			
 			.dropdown-submenu {
 			  position: relative;
 			}
@@ -145,7 +149,23 @@
 						$result = $conn-> query($sql);
 						if ($result-> num_rows > 0) {
 							while ($row = $result-> fetch_assoc()) {
-								echo "<tr><td>". $row["N"] ."</td><td>". $row["AREA"] ."</td><td>". $row["M_UFU"] ."</td><td>". $row["DP_UFU"] ."</td><td>". $row["M_ESTADO"] ."</td><td>". $row["DP_ESTADO"] ."</td><td>". $row["M_REGIAO"]  ."</td><td>". $row["DP_REGIAO"] ."</td><td>". $row["M_PUBLICAS"] ."</td><td>". $row["DP_PUBLICAS"] ."</td><td>". $row["M_UNIVERSIDADES"] ."</td><td>". $row["DP_UNIVERSIDADES"]  ."</td><td>". $row["M_BRASIL"] ."</td><td>". $row["DP_BRASIL"]  ."</td></tr>" ;
+								echo "
+										<tr>
+											<td>". $row["N"] ."</td>
+											<td>". $row["AREA"] ."</td>
+											<td>". $row["M_UFU"]*100 ."%</td>
+											<td>". $row["DP_UFU"]*100 ."%</td>
+											<td>". $row["M_ESTADO"]*100 ."%</td>
+											<td>". $row["DP_ESTADO"]*100 ."%</td>
+											<td>". $row["M_REGIAO"]*100 ."%</td>
+											<td>". $row["DP_REGIAO"]*100 ."%</td>
+											<td>". $row["M_PUBLICAS"]*100 ."%</td>
+											<td>". $row["DP_PUBLICAS"]*100 ."%</td>
+											<td>". $row["M_UNIVERSIDADES"]*100 ."%</td>
+											<td>". $row["DP_UNIVERSIDADES"]*100 ."%</td>
+											<td>". $row["M_BRASIL"]*100 ."%</td>
+											<td>". $row["DP_BRASIL"]*100 ."%</td>
+										</tr>" ;
 							}
 							echo "</table";
 						}
@@ -159,6 +179,7 @@
 		</div>		
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="js/ddtf.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 		<script>
 			$('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
@@ -176,6 +197,13 @@
 
 			  return false;
 			});
-		</script>	
+		</script>
+		<!--	
+		<script>
+			$('#table_format').ddTableFilter();
+		</script>
+		<script>
+			$('.table').excelTableFilter();
+		</script>-->
 	</body>
 </html>

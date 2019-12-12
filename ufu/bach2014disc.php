@@ -146,7 +146,23 @@
 						$result = $conn-> query($sql);
 						if ($result-> num_rows > 0) {
 							while ($row = $result-> fetch_assoc()) {
-								echo "<tr><td>". $row["N"] ."</td><td>". $row["AREA"] ."</td><td>". $row["M_UFU"] ."</td><td>". $row["DP_UFU"] ."</td><td>". $row["M_ESTADO"] ."</td><td>". $row["DP_ESTADO"] ."</td><td>". $row["M_REGIAO"]  ."</td><td>". $row["DP_REGIAO"] ."</td><td>". $row["M_PUBLICAS"] ."</td><td>". $row["DP_PUBLICAS"] ."</td><td>". $row["M_UNIVERSIDADES"] ."</td><td>". $row["DP_UNIVERSIDADES"]  ."</td><td>". $row["M_BRASIL"] ."</td><td>". $row["DP_BRASIL"]  ."</td></tr>" ;
+								echo "
+										<tr>
+											<td>". $row["N"] ."</td>
+											<td>". $row["AREA"] ."</td>
+											<td>". $row["M_UFU"]*100 ."%</td>
+											<td>". $row["DP_UFU"]*100 ."%</td>
+											<td>". $row["M_ESTADO"]*100 ."%</td>
+											<td>". $row["DP_ESTADO"]*100 ."%</td>
+											<td>". $row["M_REGIAO"]*100 ."%</td>
+											<td>". $row["DP_REGIAO"]*100 ."%</td>
+											<td>". $row["M_PUBLICAS"]*100 ."%</td>
+											<td>". $row["DP_PUBLICAS"]*100 ."%</td>
+											<td>". $row["M_UNIVERSIDADES"]*100 ."%</td>
+											<td>". $row["DP_UNIVERSIDADES"]*100 ."%</td>
+											<td>". $row["M_BRASIL"]*100 ."%</td>
+											<td>". $row["DP_BRASIL"]*100 ."%</td>
+										</tr>" ;
 							}
 							echo "</table";
 						}
@@ -158,7 +174,6 @@
 				</tbody>
 			</table>
 		</div>
-		<!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

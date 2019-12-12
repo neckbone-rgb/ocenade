@@ -145,7 +145,23 @@
 						$result = $conn-> query($sql);
 						if ($result-> num_rows > 0) {
 							while ($row = $result-> fetch_assoc()) {
-								echo "<tr><td>". $row["N"] ."</td><td>". $row["AREA"] ."</td><td>". $row["M_UFU"] ."</td><td>". $row["DP_UFU"] ."</td><td>". $row["M_ESTADO"] ."</td><td>". $row["DP_ESTADO"] ."</td><td>". $row["M_REGIAO"]  ."</td><td>". $row["DP_REGIAO"] ."</td><td>". $row["M_PUBLICAS"] ."</td><td>". $row["DP_PUBLICAS"] ."</td><td>". $row["M_UNIVERSIDADES"] ."</td><td>". $row["DP_UNIVERSIDADES"]  ."</td><td>". $row["M_BRASIL"] ."</td><td>". $row["DP_BRASIL"]  ."</td></tr>" ;
+								echo "
+										<tr>
+											<td>". $row["N"] ."</td>
+											<td>". $row["AREA"] ."</td>
+											<td>". $row["M_UFU"]*100 ."%</td>
+											<td>". $row["DP_UFU"]*100 ."%</td>
+											<td>". $row["M_ESTADO"]*100 ."%</td>
+											<td>". $row["DP_ESTADO"]*100 ."%</td>
+											<td>". $row["M_REGIAO"]*100 ."%</td>
+											<td>". $row["DP_REGIAO"]*100 ."%</td>
+											<td>". $row["M_PUBLICAS"]*100 ."%</td>
+											<td>". $row["DP_PUBLICAS"]*100 ."%</td>
+											<td>". $row["M_UNIVERSIDADES"]*100 ."%</td>
+											<td>". $row["DP_UNIVERSIDADES"]*100 ."%</td>
+											<td>". $row["M_BRASIL"]*100 ."%</td>
+											<td>". $row["DP_BRASIL"]*100 ."%</td>
+										</tr>" ;
 							}
 							echo "</table";
 						}

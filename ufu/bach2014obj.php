@@ -162,27 +162,27 @@
 										<tr>
 											<td>". $row["N"] ."</td>
 											<td>". $row["AREA"] ."</td>
-											<td>". $row["P_UFU"] ."</td>
-											<td>". $row["P_ESTADO"] ."</td>
-											<td>". $row["P_REGIÃO"]  ."</td>
-											<td>". $row["P_PUBLICAS"] ."</td>
-											<td>". $row["P_UNIVERSIDADES"] ."</td>
-											<td>". $row["P_BRASIL"] ."</td>
-											<td>". $row["VA_ESTADO"] ."</td>
-											<td>". $row["VA_REGIAO"] ."</td>
-											<td>". $row["VA_PUBLICAS"] ."</td>
-											<td>". $row["VA_UNIVERSIDADES"] ."</td>
-											<td>". $row["VA_BRASIL"] ."</td>
-											<td>". $row["ALT_A"] ."</td>
-											<td>". $row["ALT_B"] ."</td>
-											<td>". $row["ALT_C"] ."</td>
-											<td>". $row["ALT_D"] ."</td>
-											<td>". $row["ALT_E"] ."</td>
-											<td>". $row["SI"] ."</td>
-											<td>". $row["VALOR_IF"] ."</td>
-											<td>". $row["CLASS_IF"] ."</td>
-											<td>". $row["VALOR_ID"] ."</td>
-											<td>". $row["CLASS_ID"] ."</td>
+											<td>". $row["P_UFU"]*100 ."%</td>
+											<td>". $row["P_ESTADO"]*100 ."%</td>
+											<td>". $row["P_REGIAO"]*100 ."%</td>
+											<td>". $row["P_PUBLICAS"]*100 ."%</td>
+											<td>". $row["P_UNIVERSIDADES"]*100 ."%</td>
+											<td>". $row["P_BRASIL"]*100 ."%</td>
+											<td>". $row["VA_ESTADO"]*100 ."%</td>
+											<td>". $row["VA_REGIAO"]*100 ."%</td>
+											<td>". $row["VA_PUBLICAS"]*100 ."%</td>
+											<td>". $row["VA_UNIVERSIDADES"]*100 ."%</td>
+											<td>". $row["VA_BRASIL"]*100 ."%</td>
+											<td>". $row["ALT_A"]*100 ."%</td>
+											<td>". $row["ALT_B"]*100 ."%</td>
+											<td>". $row["ALT_C"]*100 ."%</td>
+											<td>". $row["ALT_D"]*100 ."%</td>
+											<td>". $row["ALT_E"]*100 ."%</td>
+											<td>". $row["SI"]*100 ."%</td>
+											<td>". $row["VALOR_IF"]."</td>
+											<td>". $row["CLASS_IF"]."</td>
+											<td>". $row["VALOR_ID"]."</td>
+											<td>". $row["CLASS_ID"]."</td>
 											<td>". $row["NIVEL_OC"] ."</td>
 											<td>". $row["COD"] ."</td>
 										</tr>" ;
